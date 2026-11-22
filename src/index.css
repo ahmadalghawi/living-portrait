@@ -189,17 +189,6 @@
     #0E1726;
 }
 
-/* a field of square pixels (the brand dot), strongest around the face, gone at the edges */
-.hero-field {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26'%3E%3Crect x='12' y='12' width='2' height='2' fill='%23F3F6F2'/%3E%3C/svg%3E");
-  opacity: 0.16;
-  -webkit-mask-image: radial-gradient(ellipse 60% 70% at 50% 52%, #000 0%, rgba(0, 0, 0, 0.35) 55%, transparent 85%);
-  mask-image: radial-gradient(ellipse 60% 70% at 50% 52%, #000 0%, rgba(0, 0, 0, 0.35) 55%, transparent 85%);
-}
-
 .hero-mark {
   color: #F3F6F2;
   display: inline-flex;
@@ -349,8 +338,7 @@
   pointer-events: none;
 }
 
-.orbit-layer,
-.code-layer {
+.orbit-layer {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -376,77 +364,4 @@
 .orbit-label:hover {
   color: #3EE0A0;
   border-color: #3EE0A0;
-}
-
-.code-block {
-  position: absolute;
-  margin: 0;
-  max-width: 30vw;
-  font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: clamp(0.68rem, 0.82vw, 0.85rem);
-  line-height: 1.65;
-  color: rgba(243, 246, 242, 0.3);
-  white-space: pre;
-  overflow: hidden;
-}
-
-.code-kw {
-  color: rgba(44, 201, 224, 0.6);
-}
-
-.code-caret {
-  display: inline-block;
-  width: 0.55em;
-  height: 1.05em;
-  margin-left: 1px;
-  vertical-align: -0.15em;
-  background: #3EE0A0;
-}
-
-@media (max-width: 767px) {
-  .code-block {
-    max-width: 88vw;
-    font-size: 0.68rem;
-  }
-}
-
-/* temporary: compare the three backgrounds */
-.bg-switcher {
-  position: absolute;
-  left: 50%;
-  bottom: 1.25rem;
-  transform: translateX(-50%);
-  z-index: 30;
-  display: flex;
-  gap: 0.25rem;
-  padding: 0.25rem;
-  border-radius: 999px;
-  background: rgba(14, 23, 38, 0.85);
-  border: 1px solid rgba(243, 246, 242, 0.16);
-}
-
-.bg-switcher button {
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  color: #C9D3DC;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.bg-switcher button[aria-pressed="true"] {
-  background: #3EE0A0;
-  color: #0E1726;
-}
-
-.bg-switcher button:focus-visible {
-  outline: 2px solid #3EE0A0;
-  outline-offset: 2px;
-}
-
-@media (max-width: 767px) {
-  .bg-switcher {
-    bottom: auto;
-    top: 4.2rem;
-  }
 }

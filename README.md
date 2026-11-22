@@ -35,13 +35,14 @@ Open http://localhost:3000.
 | `user-face-sunglasses.png` | Sunglasses (shown when you hover Contact) |
 | `user-face-tongue.png` | Tongue out (hover or click the nose). Optional extra |
 
-4. Change the name, text and links in `src/components/` to your own, and replace `public/Ahmad-Alghawi-CV.pdf` with your CV.
+4. Change the name, text and links in `src/components/` to your own, put your skills in `src/components/hero-bg/shared.ts`, and replace `public/Ahmad-Alghawi-CV.pdf` with your CV.
 
 ## How it works
 
 - `index.html` holds the face script. It draws the current picture on a WebGL canvas that bends slightly, so the skin seems to move instead of jumping between photos.
 - `CUSTOM_EXPRESSIONS` at the top of that script maps each expression name to a picture. The script knows more expressions than there are pictures (a kiss, a yawn, laughing and more), and any without its own picture reuses the closest one. Add a picture to `public/` and point an expression at it to give it its own.
 - The transparent area of the resting picture tells the script where the head is, so clicks on the background don't count as pokes.
+- Behind the face, a field of small square dots glows under the cursor and spells one skill at a time, while skill labels loop around the head (`src/components/hero-bg/`). Put your own skills in the `SKILLS` list in `src/components/hero-bg/shared.ts`. Both pause when the hero is off screen, and stay still for visitors who ask their device for reduced motion.
 - The rest of the site is React, Vite, Tailwind CSS and Framer Motion.
 
 ## Please

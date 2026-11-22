@@ -33,13 +33,13 @@ export const SkillOrbit: React.FC = () => {
       });
     }
 
-    let cx = 0, cy = 0, scaleX = 0, scaleY = 0;
+    let cx = 0, cy = 0, scaleX = 0, scaleY = 0, narrow = false;
     const measure = () => {
       const hr = host.getBoundingClientRect();
       const face = document.getElementById('magnetWrap')?.getBoundingClientRect();
       cx = face ? face.left - hr.left + face.width / 2 : hr.width / 2;
       cy = face ? face.top - hr.top + face.height * 0.5 : hr.height / 2;
-      const narrow = hr.width < 768;
+      narrow = hr.width < 768;
       scaleX = hr.width * (narrow ? 1.95 : 1);
       scaleY = hr.height * (narrow ? 0.72 : 1);
     };
@@ -56,7 +56,10 @@ export const SkillOrbit: React.FC = () => {
         const depth = Math.cos(a);
         const s = 0.82 + 0.22 * depth;
         el.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%) scale(${s})`;
-        el.style.opacity = String(0.38 + 0.62 * ((depth + 1) / 2));
+        // phones: the name sits above and below the face, so labels only show beside it
+        const side = narrow ? Math.max(0, Math.min(1, (0.75 - Math.abs(Math.sin(a))) / 0.35)) : 1;
+        el.style.opacity = String((0.38 + 0.62 * ((depth + 1) / 2)) * side);
+        el.style.visibility = side === 0 ? 'hidden' : '';
         el.style.zIndex = depth > 0 ? '15' : '5';
       }
     };
