@@ -73,15 +73,16 @@
   }
 }
 
+/* the face must fit the 36vw gap between the two words: the head fills about 2/3 of the picture */
 @media (min-width: 768px) {
   .hero-portrait-wrap {
-    width: 600px;
+    width: min(600px, 50vw);
   }
 }
 
 @media (min-width: 1024px) {
   .hero-portrait-wrap {
-    width: clamp(640px, 78vh, 46vw);
+    width: clamp(500px, 78vh, 46vw);
   }
 }
 
@@ -338,5 +339,114 @@
 @media (prefers-reduced-motion: reduce) {
   .hero * {
     transition: none !important;
+  }
+}
+
+/* ===== Hero backgrounds ===== */
+.hero-bg-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.orbit-layer,
+.code-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.orbit-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(14, 23, 38, 0.78);
+  border: 1px solid rgba(243, 246, 242, 0.16);
+  color: #F3F6F2;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: clamp(0.7rem, 0.9vw, 0.9rem);
+  white-space: nowrap;
+  pointer-events: auto;
+  will-change: transform, opacity;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.orbit-label:hover {
+  color: #3EE0A0;
+  border-color: #3EE0A0;
+}
+
+.code-block {
+  position: absolute;
+  margin: 0;
+  max-width: 30vw;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: clamp(0.68rem, 0.82vw, 0.85rem);
+  line-height: 1.65;
+  color: rgba(243, 246, 242, 0.3);
+  white-space: pre;
+  overflow: hidden;
+}
+
+.code-kw {
+  color: rgba(44, 201, 224, 0.6);
+}
+
+.code-caret {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 1px;
+  vertical-align: -0.15em;
+  background: #3EE0A0;
+}
+
+@media (max-width: 767px) {
+  .code-block {
+    max-width: 88vw;
+    font-size: 0.68rem;
+  }
+}
+
+/* temporary: compare the three backgrounds */
+.bg-switcher {
+  position: absolute;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 999px;
+  background: rgba(14, 23, 38, 0.85);
+  border: 1px solid rgba(243, 246, 242, 0.16);
+}
+
+.bg-switcher button {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: #C9D3DC;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bg-switcher button[aria-pressed="true"] {
+  background: #3EE0A0;
+  color: #0E1726;
+}
+
+.bg-switcher button:focus-visible {
+  outline: 2px solid #3EE0A0;
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .bg-switcher {
+    bottom: auto;
+    top: 4.2rem;
   }
 }

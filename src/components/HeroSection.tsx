@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ContactButton } from './ContactButton';
+import { HeroBackground } from './hero-bg/HeroBackground';
 
 interface HeroSectionProps {
   onOpenContact?: () => void;
@@ -27,8 +28,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
 
   return (
     <section id="top" className="hero relative h-screen w-full flex flex-col justify-between overflow-x-clip select-none">
-      {/* pixel field: the brand dot repeated, brightest around the face */}
-      <div className="hero-field" aria-hidden="true" />
+      {/* animated background that shows the skills */}
+      <HeroBackground />
 
       {/* Navbar */}
       <motion.nav
