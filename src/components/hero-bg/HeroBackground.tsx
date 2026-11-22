@@ -3,9 +3,10 @@ import { PixelSkills } from './PixelSkills';
 import { SkillOrbit } from './SkillOrbit';
 import { LiveCode } from './LiveCode';
 
-export type HeroBg = 'pixels' | 'orbit' | 'code';
+export type HeroBg = 'both' | 'pixels' | 'orbit' | 'code';
 
 const OPTIONS: { id: HeroBg; label: string }[] = [
+  { id: 'both', label: 'Pixels + orbit' },
   { id: 'pixels', label: 'Pixel skills' },
   { id: 'orbit', label: 'Skill orbit' },
   { id: 'code', label: 'Live code' },
@@ -13,12 +14,12 @@ const OPTIONS: { id: HeroBg; label: string }[] = [
 
 const fromUrl = (): HeroBg => {
   const v = new URLSearchParams(window.location.search).get('bg');
-  return v === 'orbit' || v === 'code' ? v : 'pixels';
+  return v === 'pixels' || v === 'orbit' || v === 'code' ? v : 'both';
 };
 
 /**
  * The animated hero background. While the three options are being compared, a small switcher
- * sits at the bottom of the hero and `?bg=pixels|orbit|code` picks one from the address bar.
+ * sits at the bottom of the hero and `?bg=both|pixels|orbit|code` picks one from the address bar.
  * TEMPORARY: once one is chosen, keep only that component and remove the switcher.
  */
 export const HeroBackground: React.FC = () => {
@@ -33,9 +34,9 @@ export const HeroBackground: React.FC = () => {
 
   return (
     <>
-      {bg !== 'pixels' && <div className="hero-field" aria-hidden="true" />}
-      {bg === 'pixels' && <PixelSkills />}
-      {bg === 'orbit' && <SkillOrbit />}
+      {(bg === 'orbit' || bg === 'code') && <div className="hero-field" aria-hidden="true" />}
+      {(bg === 'pixels' || bg === 'both') && <PixelSkills />}
+      {(bg === 'orbit' || bg === 'both') && <SkillOrbit />}
       {bg === 'code' && <LiveCode />}
 
       <div className="bg-switcher" role="group" aria-label="Compare hero backgrounds">
