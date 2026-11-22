@@ -4,7 +4,7 @@ A portfolio website whose hero is a face that follows your mouse, blinks, and re
 
 It looks like 3D, but it isn't. It is **14 pictures of the same head**, made with an AI image tool, and a small script that picks the right one at the right moment. Swap in your own 14 pictures and it becomes your face. Or a lion. Or a robot.
 
-Live example: [ahmadalghawi.com](https://www.ahmadalghawi.com) · Full guide with every prompt: **[GUIDE LINK]**
+Full guide with every prompt: **[GUIDE LINK]**
 
 ## Run it
 
