@@ -61,6 +61,7 @@
           // Emotional expressions
           shock: '/user-face-shock.png',
           scared: '/user-face-shock.png',
+          tongue: '/user-face-tongue.png',
           winkr: '/user-face-wink.png',
           winkl: '/user-face-wink.png',
           angry: '/user-face-angry.png',
@@ -215,8 +216,8 @@
         const ROTATION = ['yawn', 'shifty', 'gum', 'fly', 'flirt', 'roll', 'sneeze', 'hair', 'tug', 'cross', 'whistle', 'doze', 'cheeky', 'wow', 'sad'];
         // what each part of the face answers to
         const ZONES = {
-          hover: {eyeL: 'winkl', eyeR: 'winkr', nose: 'cross', mouth: 'kiss'},
-          tap: {brow: 'angry', eyeL: 'ouch', eyeR: 'ouch', nose: 'act:sneeze', mouth: 'tongue', cheek: 'puff', chin: 'laugh'}
+          hover: {eyeL: 'winkl', eyeR: 'winkr', nose: 'tongue', mouth: 'kiss'},
+          tap: {brow: 'angry', eyeL: 'ouch', eyeR: 'ouch', nose: 'tongue', mouth: 'tongue', cheek: 'puff', chin: 'laugh'}
         };
         const zoneAt = (u, v) => {
           const a = (u - .505) / .225, b = (v - .485) / .33;
