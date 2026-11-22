@@ -52,7 +52,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
               {item.label}
             </button>
           ))}
-          <a href="/Ahmad-Alghawi-CV.pdf" target="_blank" rel="noopener noreferrer" className="hero-nav-link">
+          <a href="Ahmad-Alghawi-CV.pdf" target="_blank" rel="noopener noreferrer" className="hero-nav-link">
             Résumé
           </a>
           <button
@@ -95,7 +95,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenContact }) => {
           style={{ '--fade-y': '30px' } as React.CSSProperties}
           data-delay="600"
         >
-          <img id="faceFallback" src="/user-face.png" alt="Ahmad Alghawi" />
+          <img id="faceFallback" src="user-face.png" alt="Ahmad Alghawi" />
           <canvas id="faceGl" aria-hidden="true"></canvas>
           <div id="faceProps" aria-hidden="true">
             <svg id="faceFly" viewBox="0 0 32 32">

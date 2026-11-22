@@ -9,7 +9,7 @@
     <meta property="og:description" content="A portfolio with a living portrait: 14 AI-generated pictures of one face that follow your mouse." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=Schibsted+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -29,52 +29,52 @@
           return;
         }
         const CUSTOM_EXPRESSIONS = {
-          rest: '/user-face.png',
-          closed: '/user-face-closed.png',
-          half: '/user-face-closed.png',
+          rest: 'user-face.png',
+          closed: 'user-face-closed.png',
+          half: 'user-face-closed.png',
           // Cardinal gaze directions
-          up: '/user-face-up.png',
-          down: '/user-face-down.png',
-          left: '/user-face-left.png',
-          right: '/user-face-right.png',
+          up: 'user-face-up.png',
+          down: 'user-face-down.png',
+          left: 'user-face-left.png',
+          right: 'user-face-right.png',
           // Diagonal gaze directions
-          downleft: '/user-face-downleft.png',
-          downright: '/user-face-downright.png',
-          upleft: '/user-face-upleft.png',
-          upright: '/user-face-upright.png',
+          downleft: 'user-face-downleft.png',
+          downright: 'user-face-downright.png',
+          upleft: 'user-face-upleft.png',
+          upright: 'user-face-upright.png',
           // 16-point gaze ring mappings
-          n: '/user-face-up.png',
-          nne: '/user-face-upright.png',
-          ne: '/user-face-upright.png',
-          ene: '/user-face-upright.png',
-          e: '/user-face-right.png',
-          ese: '/user-face-downright.png',
-          se: '/user-face-downright.png',
-          sse: '/user-face-down.png',
-          s: '/user-face-down.png',
-          ssw: '/user-face-down.png',
-          sw: '/user-face-downleft.png',
-          wsw: '/user-face-downleft.png',
-          w: '/user-face-left.png',
-          wnw: '/user-face-upleft.png',
-          nw: '/user-face-upleft.png',
-          nnw: '/user-face-upleft.png',
+          n: 'user-face-up.png',
+          nne: 'user-face-upright.png',
+          ne: 'user-face-upright.png',
+          ene: 'user-face-upright.png',
+          e: 'user-face-right.png',
+          ese: 'user-face-downright.png',
+          se: 'user-face-downright.png',
+          sse: 'user-face-down.png',
+          s: 'user-face-down.png',
+          ssw: 'user-face-down.png',
+          sw: 'user-face-downleft.png',
+          wsw: 'user-face-downleft.png',
+          w: 'user-face-left.png',
+          wnw: 'user-face-upleft.png',
+          nw: 'user-face-upleft.png',
+          nnw: 'user-face-upleft.png',
           // Emotional expressions
-          shock: '/user-face-shock.png',
-          scared: '/user-face-shock.png',
-          tongue: '/user-face-tongue.png',
-          winkr: '/user-face-wink.png',
-          winkl: '/user-face-wink.png',
-          angry: '/user-face-angry.png',
-          ouch: '/user-face-angry.png',
-          scrunch: '/user-face-angry.png',
-          laugh: '/user-face-wink.png',
-          grin: '/user-face.png',
+          shock: 'user-face-shock.png',
+          scared: 'user-face-shock.png',
+          tongue: 'user-face-tongue.png',
+          winkr: 'user-face-wink.png',
+          winkl: 'user-face-wink.png',
+          angry: 'user-face-angry.png',
+          ouch: 'user-face-angry.png',
+          scrunch: 'user-face-angry.png',
+          laugh: 'user-face-wink.png',
+          grin: 'user-face.png',
           // Sunglasses for Contact interaction
-          sunglasses: '/user-face-sunglasses.png',
-          hearts: '/user-face-sunglasses.png'
+          sunglasses: 'user-face-sunglasses.png',
+          hearts: 'user-face-sunglasses.png'
         };
-        const url = name => CUSTOM_EXPRESSIONS[name] || '/user-face.png';
+        const url = name => CUSTOM_EXPRESSIONS[name] || 'user-face.png';
         // every expression name the script can ask for; any without its own picture shows the resting face
         const EXPRESSION_NAMES = ["left","closed","shock","tongue","right","downleft","upright","up","downright","down","half","cross","angry","scrunch","winkr","winkl","raised","puff","laugh","yawn","grin","kiss","cry","smug","scared","fish","blue","dizzy","blonde","pink","wind","sse","nnw","ese","ene","wnw","ssw","wsw","ouch","deadpan","yawn1","yawn2","whistle1","nne","yawn4","sneeze1","gum1","gum2","whistle2","sneeze2","gum3","gumpop","hearts","stars","snore","shy","sick","rest"];
 

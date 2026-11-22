@@ -130,7 +130,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
             <FadeIn delay={0.4} y={20}>
               <div className="flex flex-wrap items-center gap-4 pt-4">
                 <a
-                  href="/Ahmad-Alghawi-CV.pdf"
+                  href="Ahmad-Alghawi-CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#181818] hover:bg-[#222222] text-[#D7E2EA] hover:text-white border border-[#D7E2EA]/20 font-medium text-sm tracking-wider uppercase transition-all shadow-lg hover:border-emerald-500/40 cursor-pointer"

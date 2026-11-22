@@ -100,7 +100,7 @@ export const ScrollToTop: React.FC = () => {
           <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-black flex items-center justify-center border border-emerald-500/30 group-hover:border-emerald-400 transition-colors">
             {/* Looking-Up Face (default) / Sunglasses Face (on hover) */}
             <img
-              src={isHovered ? '/user-face-sunglasses.png' : '/user-face-up.png'}
+              src={isHovered ? 'user-face-sunglasses.png' : 'user-face-up.png'}
               alt="Ahmad Alghawi"
               className="w-full h-full object-cover object-center scale-110 group-hover:scale-115 transition-transform duration-300 select-none"
             />

@@ -74,7 +74,7 @@ export default function App() {
 
             <div className="flex flex-wrap items-center gap-4">
               <a
-                href="/Ahmad-Alghawi-CV.pdf"
+                href="Ahmad-Alghawi-CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#181818] hover:bg-[#252525] border border-[#D7E2EA]/20 text-xs font-semibold uppercase tracking-wider text-white transition-all shadow-md hover:border-emerald-500/40"

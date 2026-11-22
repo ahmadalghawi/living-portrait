@@ -4,7 +4,7 @@ A portfolio website whose hero is a face that follows your mouse, blinks, and re
 
 It looks like 3D, but it isn't. It is **14 pictures of the same head**, made with an AI image tool, and a small script that picks the right one at the right moment. Swap in your own 14 pictures and it becomes your face. Or a lion. Or a robot.
 
-Full guide with every prompt: **[Put your own face on your website](https://www.ahmadalghawi.com/blog/living-portrait-add-your-face)**
+**Live demo: [ahmadalghawi.github.io/living-portrait](https://ahmadalghawi.github.io/living-portrait/)** · Full guide with every prompt: **[Put your own face on your website](https://www.ahmadalghawi.com/blog/living-portrait-add-your-face)**
 
 ## Run it
 
@@ -36,6 +36,16 @@ Open http://localhost:3000.
 | `user-face-tongue.png` | Tongue out (hover or click the nose). Optional extra |
 
 4. Change the name, text and links in `src/components/` to your own, put your skills in `src/components/hero-bg/shared.ts`, and replace `public/Ahmad-Alghawi-CV.pdf` with your CV.
+
+## Put it online
+
+The repo deploys itself to GitHub Pages with GitHub Actions (`.github/workflows/deploy.yml`) on every push to `main`.
+
+1. Fork or copy the repo to your own GitHub account.
+2. In the repo on GitHub, open **Settings → Pages** and set **Source** to **GitHub Actions**.
+3. Push to `main`. After a minute or two the site is live at `https://<your-user>.github.io/<repo-name>/`.
+
+All asset paths are relative (`base: './'` in `vite.config.ts`), so it works under any repo name.
 
 ## How it works
 
