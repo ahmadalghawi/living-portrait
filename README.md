@@ -33,6 +33,7 @@ Open http://localhost:3000.
 | `user-face-shock.png` | Surprised |
 | `user-face-angry.png` | Annoyed |
 | `user-face-sunglasses.png` | Sunglasses (shown when you hover Contact) |
+| `user-face-tongue.png` | Tongue out (hover or click the nose). Optional extra |
 
 4. Change the name, text and links in `src/components/` to your own, and replace `public/Ahmad-Alghawi-CV.pdf` with your CV.
 
